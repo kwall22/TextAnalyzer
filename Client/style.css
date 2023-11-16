@@ -1,0 +1,443 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #a2c6f5;
+    color:#585a5c;
+}
+
+#header-button-div{
+    display: inline;
+}
+
+#login-user-button{
+    position: sticky;
+    margin-right: 20px;
+    margin-top: 20px;
+    float: right;
+    font-family: 'Roboto';
+    background-color:  #5184F8;
+    border-radius: 30px;
+    color: black;
+    border-style: none;
+    padding: 8px;
+}
+
+#login-user-button:hover,
+#login-user-button:focus {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+#submit-login-user-button{
+    font-family: 'Roboto';
+    background-color: darkgray;
+    border-radius: 30px;
+    color: black;
+    border-style: none;
+    padding: 8px;
+}
+
+#submit-login-user-button:hover,
+#submit-login-user-button:focus {
+    background-color: #5184F8;
+    cursor: pointer;
+}
+
+.loginUserModal-content{
+    background-color: #f0f3f5;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    border-radius: 30px;
+    text-align: center;
+    font-size: larger;
+}
+
+.loginUserModal-content ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.loginUserModal-content input{
+    background-color: white;
+    border-radius: 30px;
+    font-family: 'Roboto';
+    padding: 8px;
+}
+
+.loginUserModal{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.close-loginUserModal{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-loginUserModal:hover,
+.close-loginUserModal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+#create-user-button{
+    position: sticky;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-family: 'Roboto';
+    background-color: darkgray;
+    border-radius: 30px;
+    color: black;
+    border-style: none;
+    padding: 8px;
+}
+
+#create-user-button:hover,
+#create-user-button:focus {
+    background-color: #5184F8;
+    cursor: pointer;
+}
+
+#submit-new-user-button{
+    font-family: 'Roboto';
+    background-color: darkgray;
+    border-radius: 30px;
+    color: black;
+    border-style: none;
+    padding: 8px;
+}
+
+#submit-new-user-button:hover,
+#submit-new-user-button:focus {
+    background-color: #5184F8;
+    cursor: pointer;
+}
+
+
+.UserModal-content{
+    background-color: #f0f3f5;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    border-radius: 30px;
+    text-align: center;
+    font-size: larger;
+}
+.UserModal-content ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.UserModal-content input{
+    background-color: white;
+    border-radius: 30px;
+    font-family: 'Roboto';
+    padding: 8px;
+}
+
+.UserModal{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.close-UserModal{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-UserModal:hover,
+.close-UserModal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#hero{
+    background-image: url(images/blank-text-bubble.png);
+    height: 150px;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+h1{
+    color:#585a5c;
+    text-align: center; 
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+#nameNzodiacDiv{
+    text-align: left;
+    width: 50%;
+    margin: auto;
+}
+
+#name-input{
+    margin: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 4px;
+}
+
+#zodiac-input{
+    margin-left: 29px;
+    height: 20px;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 4px;
+}
+
+#make-analyze-button{
+    border-radius: 50%;
+    background-color: #5184F8;
+    border: none;
+    height: 30px;
+}
+
+#make-analyze-button:hover,
+#make-analyze-button:focus {
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
+#main-buttons{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h3{
+    margin-left: 5%;
+}
+
+#past-texts-list{
+    list-style-type: none;
+    width: 60%;
+}
+
+#past-texts-list li{
+    border: 1px solid darkblue;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+li{
+    padding: 10px;
+}
+li button{
+    margin: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: darkgrey;
+    border-color: darkgray;
+}
+
+li button:hover,
+li button:focus {
+    background-color: #5184F8;
+    border-color: #5184F8;
+    cursor: pointer;
+}
+
+#past-time-list{
+    list-style-type: none;
+}
+#past-analysis-list{
+    list-style-type: none;
+}
+
+#text-input{
+    border-radius: 30px;
+    height: 25px;
+    width: 300px;
+    padding: 20px;
+    font-family: 'Roboto';
+}
+
+.conversation{
+    display: grid;
+    width: 100%;
+    grid-gap: 0.6rem;
+    max-width: 40rem;
+    margin: auto;
+    list-style-type: none;
+}
+
+.past-text, .an-analysis, .time-sent {
+    padding: 1%;
+    min-width: 20rem;
+    border-radius: 0.6rem;
+    list-style-type: none;
+}
+
+.contact{
+    justify-self: center;
+    background-color: #585a5c;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    width: 40%;
+}
+
+.past-text{
+    justify-self: right;
+    background-color: #5184F8;
+    border-radius: 30px;
+    color: black;
+    width: fit-content;
+    padding: 15px;
+}
+
+.time-sent{
+    justify-self: right;
+    font-size: small;
+    padding-top: 0px;
+}
+
+.an-analysis{
+    justify-self: left;
+    background-color: darkgray;
+    border-radius: 30px;
+    color: black;
+    width: fit-content;
+    padding: 15px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+#modal-name-input{
+    margin: auto;
+    background-color: #585a5c;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    width: 40%;
+    font-size: larger;
+}
+
+#modal-zodiac-li{
+    padding-top: 0px;
+}
+
+#modal-zodiac-li label{
+    font-size: smaller;
+}
+
+#modal-zodiac-input{
+    font-size: small;
+    background-color: #6b6d6e;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    width: 20%;
+
+}
+
+#modal-text-li{
+    padding-bottom: 0px;
+}
+
+#modal-text-input{
+    margin-left: 20%;
+    background-color: #5184F8;
+    border-radius: 30px;
+    color: black;
+    width: fit-content;
+    padding: 15px;
+    font-family: 'Roboto';
+}
+
+#modal-time-li{
+    margin-left: 20%;
+    font-size: small;
+    padding-top: 0px;
+}
+
+#modal-analysis-li{
+    padding-top: 0px;
+}
+
+#modal-analysis{
+    margin-left: 30%;
+    background-color: darkgray;
+    border-radius: 30px;
+    color: black;
+    width: 20%;
+    padding: 15px;
+    font-size: small;
+    margin-top: 0px;
+}
+
+.modal-content h2{
+    font-size: larger;
+}
+
+.modal-content {
+    background-color: #f0f3f5;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    border-radius: 30px;
+    text-align: center;
+    font-size: larger;
+}
+.close-modal{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

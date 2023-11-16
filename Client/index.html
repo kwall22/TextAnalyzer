@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>TextAnalyzer</title>
+    </head>
+    <body>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <div id="header-div">
+            <div id="header-button-div">
+                <button id="create-user-button">Create User</button>
+                <button id="login-user-button">Login</button>
+            </div>
+            <br>
+            <h1>What were they really saying?</h1>
+        </div>
+        <div id="login-and-register-div">
+        <div id="createUserModalDiv" class="UserModal">
+            <div id="UserModal-contentDiv" class="UserModal-content">
+                <span class="close-UserModal">&times;</span>
+                <h2>Create New User</h2>
+                <ul>
+                    <li>
+                        <label for="firstName-input">Enter your first name</label> 
+                        <input type="text" id="firstName-input" autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="lastName-input">Enter your last name</label>
+                        <input type="text" id="lastName-input" autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="emailAddress-input">Enter your email address</label>
+                        <input type="text" id="emailAddress-input" autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="password-input">Create a password</label>
+                        <input type="text" id="password-input" autocomplete="off">
+                    </li>
+                </ul>
+                <p id="possible-error-message"></p>
+                <button id="submit-new-user-button">Submit</button>
+            </div>
+        </div>
+
+        <div id="loginUserModalDiv" class="loginUserModal">
+            <div id="loginUserModal-contentDiv" class="loginUserModal-content">
+                <span class="close-loginUserModal">&times;</span>
+                <h2>Log in</h2>
+                <ul>
+                    <li>
+                        <label for="loginEmail-input">Type in your email</label>
+                        <input type="text" id="loginEmail-input" autocomplete="off">
+                    </li>
+                    <li>
+                        <label for="loginPassword-input">Type in your password</label>
+                        <input type="text" id="loginPassword-input" autocomplete="off">
+                    </li>
+                </ul>
+                <p id="loginErrorMessage"></p>
+                <button id="submit-login-user-button">Log in</button>
+            </div>
+        </div>
+        </div>
+
+        <div id="hero"></div>
+        <div id="body-if-logged-in">
+        <div id="main-buttons">
+            <h2>Give your bestie a break and paste their text here instead</h2>
+            <div id="nameNzodiacDiv">
+                <label for="name-input">gimme their name</label>
+                <input type="text" id="name-input">
+                <br>
+                <label for="zodiac-input">gimme their sign</label>
+                <input type="text" id="zodiac-input">
+            </div>
+            <br>
+            <textarea type="text" id="text-input"></textarea>
+            <button id="make-analyze-button">Analyze</button><br>
+            <br>
+            <div id="check-after10">
+                <input type="checkbox" id="after10">
+                <label for="after10">sent after 10 pm?</label>
+            </div>
+        </div>
+        <div class="conversation">
+            <div class="contact"></div>
+            <div class="past-zodiac"></div>
+            <div class="past-text"></div>
+            <div class="time-sent"></div>
+            <div class="an-analysis"></div>
+        </div>
+        <div id="modalDivID" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Edit Details</h2>
+                <ul id="modal-content-list">
+                    <li id="modal-name-li">
+                        <label for="modal-name-input">Contact</label>
+                        <br>
+                        <input type="text" id="modal-name-input" placeholder="Name">
+                    </li>
+                    <li id="modal-zodiac-li">
+                        <input type="text" id="modal-zodiac-input" placeholder="Zodiac Sign">
+                    </li>
+                    <li id="modal-text-li">
+                        <textarea type="text" id="modal-text-input"></textarea>
+                    </li>
+                    <li id="modal-time-li">
+                        <label for="modal-time-checkbox">sent after 10 pm?</label>
+                        <input type="checkbox" id="modal-time-checkbox">
+                    </li>
+                    <li id="modal-analysis-li">
+                        <p id="modal-analysis"></p>
+                    </li>
+                </ul>
+                <button id="submit-edit-button">Submit</button>
+            </div>
+        </div>
+        <br>
+        <h3>Past Texts</h3>
+        <ul id="past-texts-list"></ul>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

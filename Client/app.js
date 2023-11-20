@@ -351,6 +351,9 @@ createUserButton.onclick = function(){
             if (response.ok) {
                 console.log("success", response);
                 //loadDataFromServer();
+                var thankyou = document.createElement("p");
+                thankyou.innerHTML = "successful register";
+                
                 var UserModal = document.getElementById("createUserModalDiv");
                 UserModal.style.display = "none";
                 var firstNameInput = document.getElementById("firstName-input");

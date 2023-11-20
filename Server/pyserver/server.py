@@ -96,6 +96,8 @@ def retrieve_texts_collection():
 #retreive 
 @ app.route("/texts/<int:text_id>", methods=["GET"])
 def retrieve_texts_member(text_id):
+    if "UserID" not in g.session_data:
+        return "Unauthorized", 401
     db = ConversationsDB()
     aConversation = db.getConversation(text_id)
     if aConversation:
@@ -107,6 +109,8 @@ def retrieve_texts_member(text_id):
 #delete
 @ app.route("/texts/<int:text_id>", methods=["DELETE"])
 def delete_texts_member(text_id):
+    if "UserID" not in g.session_data:
+        return "Unauthorized", 401
     db = ConversationsDB()
     aConversation = db.getConversation(text_id)
     if aConversation:
@@ -118,6 +122,8 @@ def delete_texts_member(text_id):
 #update
 @ app.route("/texts/<int:text_id>", methods=["PUT"])
 def update_texts_member(text_id):
+    if "UserID" not in g.session_data:
+        return "Unauthorized", 401
     db = ConversationsDB()
     aConversation = db.getConversation(text_id)
     if aConversation:
@@ -133,6 +139,8 @@ def update_texts_member(text_id):
 
 @ app.route("/texts", methods=["POST"])
 def create_in_texts_collection():
+    if "UserID" not in g.session_data:
+        return "Unauthorized", 401
     #dictRecord = {'PastText' : request.form["PastText"], 'PastTime' : request.form["PastTime"], 'PastAnalysis' : request.form["PastAnalysis"]}
     pastText = request.form["PastText"]
     pastTime = request.form["PastTime"]

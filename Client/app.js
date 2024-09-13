@@ -188,10 +188,8 @@ function loadDataFromServer(){
                 deleteButton.innerHTML = "Delete";
                 deleteButton.onclick = function(){
                     if (window.confirm("Are you sure you want to delete?")){
-                    console.log("delete button was clicked", APastConversation.id); //how to know very important 
-                    deleteConversation(APastConversation.id);
-                    //call the delete function on the .id which has a fetch request i think 
-                    //dont reload the list here, reload it inside the delete function  
+                    console.log("delete button was clicked", APastConversation.id);  
+                    deleteConversation(APastConversation.id);  
                     };
                 };
                 newListItem.appendChild(deleteButton);
@@ -221,7 +219,6 @@ function editConversation(conversation_id){
     };
     var submitButton = document.getElementById("submit-edit-button");
     var edit_conversation_dict = {};
-    //retrieving conversation member
     fetch("http://localhost:8080/texts/" + id, {
         credentials: "include",
         method: "GET",
@@ -229,7 +226,6 @@ function editConversation(conversation_id){
         response.json().then(function (data) {
             console.log("response data received:", data);
             edit_conversation_dict = data;
-            //filling in the fields
             var modalNameInput = document.getElementById("modal-name-input");
             modalNameInput.value = edit_conversation_dict["pastFrom"];
             var modalZodiacInput = document.getElementById("modal-zodiac-input");
@@ -255,7 +251,6 @@ function updateConversation(conversation_id){
     var modalTextInput = document.getElementById("modal-text-input");
     var modalTimeCheckbox = document.getElementById("modal-time-checkbox");
     var modalAnalysis = document.getElementById("modal-analysis");
-    //new analysis
     
     var randomIndex = Math.floor(Math.random() * allAnalysisList.length);
     console.log("random index", randomIndex);
@@ -284,8 +279,7 @@ function updateConversation(conversation_id){
        displayBubbles(id, modalTextInput, modalTimeCheckbox, modalNameInput, randomAdvice);
     }); 
 };
-
-//update the conversation bubbles 
+ 
 function displayBubbles(conversation_id, text, timeCheckbox, contact, advice){
     console.log("updating the conversation bubbles for the edited conversation", conversation_id);
     conversationTextItem.innerHTML = text.value;
@@ -311,7 +305,6 @@ function deleteConversation(conversation_id){
         loadDataFromServer();
     });
 };
-//AHHHHHHHHH
 createUserButton.onclick = function(){
     var submitNewUserButton = document.getElementById("submit-new-user-button");
     console.log("create user button was clicked");
@@ -350,7 +343,6 @@ createUserButton.onclick = function(){
         }).then(function (response){
             if (response.ok) {
                 console.log("success", response);
-                //loadDataFromServer();
                 var thankyou = document.createElement("p");
                 thankyou.innerHTML = "successful register";
                 
@@ -367,8 +359,6 @@ createUserButton.onclick = function(){
             }
             if (!response.ok) {
                 console.log("failure", response);
-                //loadDataFromServer();
-                //var UserModalContent = document.getElementById("UserModal-contentDiv");
                 var ErrorMessageP = document.getElementById("possible-error-message");
                 ErrorMessageP.innerHTML = "Email Address is already in use";
                 ErrorMessageP.style.color = "#c91812";
@@ -411,8 +401,7 @@ loginUserButton.onclick = function(){
                 globalLoggedIn = true;
 
                 loadDataFromServer();
-                //var LoginUserModal = document.getElementById("loginUserModalDiv");
-                //LoginUserModal.style.display = "none";
+
                 var loginErrorMessage = document.getElementById("loginErrorMessage");
                 loginErrorMessage.innerHTML = "Successfully Logged in";
                 loginErrorMessage.style.color = "#319138";
@@ -432,20 +421,3 @@ loginUserButton.onclick = function(){
         });
     };
 };
-
-//am i logged in 
-/* inside load data from server 
-When the page loads 
-say 401 if they arent logged in 
-200 if they are 
-if (response.status == 401){
-    hide the data, change the style in the dom to display none 
-    show log in and register UI 
-
-    when user logs in successfully: 
-        loadDataFromServer() just start back over 
-
-}else if (response.status == 200){
-    show the data 
-    hide the register and log in ui 
-} */

@@ -15,7 +15,6 @@ class ConversationsDB:
         
     
     def createConversation(self, pastText, pastTime, pastAnalysis, pastFrom, pastZodiac):
-        #dont hard coded values from the query
         data = [pastText, pastTime, pastAnalysis, pastFrom, pastZodiac]
         self.cursor.execute("INSERT INTO conversations (pastText, pastTime, pastAnalysis, pastFrom, pastZodiac) VALUES (?, ?, ?, ?, ?)", data)
         self.connection.commit()
@@ -23,14 +22,13 @@ class ConversationsDB:
     def getConversations(self):
         self.cursor.execute("SELECT * FROM conversations")
         records = self.cursor.fetchall()
-        #print(records)
         return records
     
     def getConversation(self, text_id):
         data = [text_id]
-        self.cursor.execute("SELECT * FROM conversations WHERE id = ?", data) #returns either one or 0 records
+        self.cursor.execute("SELECT * FROM conversations WHERE id = ?", data) 
         record = self.cursor.fetchone()
-        return record #will return none if it doesnt exist
+        return record 
     
     def deleteConversation(self, text_id):
         data = [text_id]
